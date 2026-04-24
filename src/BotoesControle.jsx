@@ -1,21 +1,26 @@
-const BotoesControle = (props) => {
+const BotoesControle = ({
+  retrocederFaixa,
+  tocarOuPausarFaixa,
+  taTocando,
+  avancarFaixa,
+  retroceder15s,
+  avancar15s,
+}) => {
   return (
     <div className="caixa-botoes">
-      <button onClick={props.retrocederFaixa}>
+      <button onClick={retrocederFaixa}>
         <i className="bi bi-skip-start"></i>
       </button>
-      <button>
+      <button onClick={retroceder15s}>
         <i className="bi bi-arrow-counterclockwise"></i>
       </button>
-      <button onClick={props.tocarOuPausarFaixa}>
-        <i
-          className={`bi bi-${props.taTocando ? 'pause' : 'play'}-circle-fill`}
-        ></i>
+      <button onClick={tocarOuPausarFaixa}>
+        <i className={`bi bi-${taTocando ? 'pause' : 'play'}-circle-fill`}></i>
       </button>
-      <button>
+      <button onClick={avancar15s}>
         <i className="bi bi-arrow-clockwise"></i>
       </button>
-      <button onClick={props.avancarFaixa}>
+      <button onClick={avancarFaixa}>
         <i className="bi bi-skip-end"></i>
       </button>
     </div>

@@ -1,4 +1,4 @@
-const ContainerProgresso = ({tempoTotalFaixa, tempoAtualFaixa}) => {
+const ContainerProgresso = ({tempoTotalFaixa, tempoAtualFaixa, referencia, avancarPara}) => {
 const formatarTempo = (tempoEmSegundos) => {
   const tempo = new Date(null)
   tempo.setSeconds(tempoEmSegundos)
@@ -9,7 +9,7 @@ const formatarTempo = (tempoEmSegundos) => {
 
   return (
     <section className="container-progresso">
-      <div className="progresso-total">
+      <div className="progresso-total" ref={referencia} onClick={avancarPara}>
         <div className="progresso-atual" style={{
           width: `${(tempoAtualFaixa * 100) / tempoTotalFaixa}%`
         }}></div>
