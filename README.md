@@ -1,16 +1,31 @@
-# React + Vite
+# 🎧 Interface Audiobook - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![GitHub repo size](https://img.shields.io/github/repo-size/pedromarinz/interface-audiobook?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/pedromarinz/interface-audiobook?style=for-the-badge)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-Currently, two official plugins are available:
+Este projeto é uma aplicação reativa desenvolvida em **React** que simula a interface de um player de audiobook. O objetivo principal foi o gerenciamento de estados complexos e a criação de uma interface moderna, responsiva e intuitiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 O Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Diferente de um player de áudio convencional, este projeto focou em resolver o desafio de manter a sincronia entre a faixa de áudio, a barra de progresso e a listagem dinâmica de capítulos.
 
-## Expanding the ESLint configuration
+* **Componentização Atómica:** Divisão da interface em peças menores e reutilizáveis (Botões de Controlo, Timeline, Card do Livro).
+* **Gestão de Estado Reativa:** Implementação de Hooks (`useState`, `useEffect`) para manipular o ciclo de vida do áudio e as transições entre capítulos sem recarregamento de página.
+* **Lógica de Navegação:** Uso de métodos de array para manipulação dinâmica da lista de reprodução, garantindo fluidez na troca de faixas.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologias e Ferramentas
+
+* **React.js:** Biblioteca principal para a construção da UI.
+* **JavaScript (ES6+):** Lógica de manipulação da API de Áudio e gestão de estados.
+* **HTML5 & CSS3:** Foco em design responsivo e acessibilidade.
+* **Git & GitHub:** Versionamento de código com foco em boas práticas de documentação.
+
+## ✨ Funcionalidades
+
+- [x] **Controlo Reativo:** Play e Pause sincronizados com o estado global.
+- [x] **Navegação Inteligente:** Botões de "Próximo" e "Anterior" que respeitam a ordem dos capítulos.
+- [x] **Interface Adaptável:** Feedback visual imediato ao trocar de faixa (Capa e Título).
+- [ ] **Persistência (Próximo Passo):** Implementação de `localStorage` para salvar
